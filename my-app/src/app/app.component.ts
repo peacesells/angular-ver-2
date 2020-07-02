@@ -11,12 +11,11 @@ export class Product {
 @Component({
   selector: 'my-app',
   template: `
+  <section class="content">
     <div class="col-xs-10">
       <div class="form-group">
         <label>Продукт</label>
         <input class="form-control" name="title" [(ngModel)]="Product.title" />
-      </div>
-      <div class="form-group">
         <label>Цена</label>
         <input
           type="number"
@@ -24,12 +23,8 @@ export class Product {
           name="price"
           [(ngModel)]="Product.price"
         />
-      </div>
-      <div class="form-group">
         <label>Описание</label>
         <input class="form-control" name="title" [(ngModel)]="Product.discription" />
-      </div>
-      <div class="form-group">
         <button class="btn btn-default" (click)="addProduct()">Добавить</button>
       </div>
     </div>
@@ -39,6 +34,7 @@ export class Product {
         <li>{{ p.title }} ({{ p.discription }}) - {{ p.price }}</li>
       </ul>
     </div>
+  </section>
   `
 })
 export class AppComponent {
