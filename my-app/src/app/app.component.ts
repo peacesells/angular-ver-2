@@ -32,9 +32,7 @@ export class Product {
       <div class="product-list">
         <h3>Добавленные элементы</h3>
         <ul *ngFor="let p of Products" id="myList">
-          <li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}
-          <span (click)="onDelete(p.title, p.price, p.discription)" class="fa fa-pencil"></span>
-          </li>
+          <span onclick="this.parentNode.removeChild(this);" class="fa fa-trash"><li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}</li></span>
         </ul>
       </div>
     </div>
@@ -51,11 +49,4 @@ export class AppComponent {
       new Product(this.Product.title, this.Product.price, this.Product.discription)
     )
   }
-
-  onDelete(){
-      var node = document.getElementById("myList");
-        if (node.parentNode) {
-          node.parentNode.removeChild(node);
-         }
-      }
 }
