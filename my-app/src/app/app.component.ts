@@ -12,7 +12,7 @@ export class Product {
   selector: 'my-app',
   template: `
   <section class="content">
-    <div class="col-xs-10">
+    <div class="col-md-6">
       <div class="form-group">
         <label>Продукт</label>
         <input class="form-control" name="title" [(ngModel)]="Product.title" />
@@ -28,17 +28,19 @@ export class Product {
         <button class="btn btn-default" (click)="addProduct()">Добавить</button>
       </div>
     </div>
-    <div>
-      <h3>Добавленные элементы</h3>
-      <ul *ngFor="let p of Products">
-        <li>{{ p.title }} ({{ p.discription }}) - {{ p.price }}</li>
-      </ul>
+    <div class="col-md-6">
+      <div class="product-list">
+        <h3>Добавленные элементы</h3>
+        <ul *ngFor="let p of Products">
+          <li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}</li>
+        </ul>
+      </div>
     </div>
   </section>
   `
 })
 export class AppComponent {
-  Product: Product = new Product('', 0, '')
+  Product: Product = new Product('', 0 , '')
   Products: Product[] = []
   companies: string[] = []
 

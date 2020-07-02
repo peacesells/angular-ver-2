@@ -60,6 +60,14 @@ input:focus {
     justify-content: center;
 }
 
+.feedback-description {
+    max-width: 310px;
+    padding-bottom: 72px;
+    .subtitle {
+        font-size: 16px;
+    }
+}    
+
 @media screen and (max-width: 674px) {
     .content {
         flex-direction: column;
