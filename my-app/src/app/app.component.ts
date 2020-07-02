@@ -24,7 +24,7 @@ export class Product {
           [(ngModel)]="Product.price"
         />
         <label>Описание</label>
-        <input class="form-control" name="title" [(ngModel)]="Product.discription" />
+        <textarea class="form-control" name="title" [(ngModel)]="Product.discription" rows="3" cols="3"></textarea>
         <button class="btn btn-default" (click)="addProduct()">Добавить</button>
       </div>
     </div>
@@ -32,7 +32,9 @@ export class Product {
       <div class="product-list">
         <h3>Добавленные элементы</h3>
         <ul *ngFor="let p of Products">
-          <li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}</li>
+          <li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}
+          <span (click)="onEdit()" class="fa fa-pencil"></span>
+          </li>
         </ul>
       </div>
     </div>
