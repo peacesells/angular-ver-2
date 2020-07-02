@@ -24,16 +24,16 @@ export class Product {
           [(ngModel)]="Product.price"
         />
         <label>Описание</label>
-        <textarea class="form-control" name="title" [(ngModel)]="Product.discription" rows="3" cols="3"></textarea>
+        <textarea class="form-control" name="discription" [(ngModel)]="Product.discription" rows="3" cols="3"></textarea>
         <button class="btn btn-default" (click)="addProduct()">Добавить</button>
       </div>
     </div>
     <div class="col-md-6">
       <div class="product-list">
         <h3>Добавленные элементы</h3>
-        <ul *ngFor="let p of Products">
+        <ul *ngFor="let p of Products" id="myList">
           <li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}
-          <span (click)="onEdit()" class="fa fa-pencil"></span>
+          <span (click)="onDelete(p.title, p.price, p.discription)" class="fa fa-pencil"></span>
           </li>
         </ul>
       </div>
@@ -51,4 +51,11 @@ export class AppComponent {
       new Product(this.Product.title, this.Product.price, this.Product.discription)
     )
   }
+
+  onDelete(){
+      var node = document.getElementById("myList");
+        if (node.parentNode) {
+          node.parentNode.removeChild(node);
+         }
+      }
 }
