@@ -28,5 +28,34 @@ button {
 }
 
 input {
+	background-color: #fff;
+	background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 0px;
+  resize: none;
+  box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.04);
+}
 
+input:hover,
+input:focus {
+    color: #000;
+}
+
+.content {
+    padding-top: 48px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 980px;
+    justify-content: center;
 }
