@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;1,300&display=swap');
 
 * {
-	font-weight: 300;
+	font-weight: 250;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 29px;
+	font-size: 15px;
 	color: #5b6d91;
 	margin: 0;
 }
@@ -63,7 +63,19 @@ input:focus {
 
 .product-list {
 		text-align: center;
-}    
+}
+
+ul {
+  position: relative;
+  margin: 10px auto 0;
+  padding: 10px;
+  box-sizing: border-box;
+  li {
+    display: flex;
+    padding: 10px 20px;
+    margin: 5px 0;
+  }
+}
 
 @media screen and (max-width: 674px) {
     .content {
