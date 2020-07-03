@@ -17,7 +17,7 @@
     <div class="product-list">
       <h3>Добавленные продукты</h3>
       <ul *ngFor="let p of Products" id="myList">
-        <span onclick="this.parentNode.removeChild(this);" class="fa fa-trash"><hr><li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}</li></span>
+        <span onclick="this.parentNode.removeChild(this);" class="fa fa-trash"><li>{{ p.title }} {{ p.price }} руб - {{ p.discription }}</li><hr></span>
       </ul>
     </div>
   </div>
